@@ -1,123 +1,130 @@
 <html>
-  <head></head>
+  <head>
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/6718b752a3.js" crossorigin="anonymous"></script>
+  </head>
   <body>
-    <table>
-      <tbody>
-        <tr>
-          <td>
+    <div class="d-flex">
+      <div>
+        <ul class="wd-kanbas-navigation">
+          <li>
+            <a href="http://northeastern.edu">N</a>
+          </li>
+          <li>
+            <a href="/Kanbas/Account/Profile/screen.html">
+              <i class="fa-regular fa-user" id="account"></i>
+              Account</a>
+          </li>
+          <li>
+            <a href="../../Dashboard/screen.html">
+              <i class="fa fa-tachometer"></i>Dashboard</a>
+          </li>
+          <li class="wd-active"><a href="/Kanbas/Courses/Home/screen.html"><i class="fa-solid fa-book"></i>Courses</a> </li>
+          <li><a href="#"><i class="fa-solid fa-calendar"></i>Calendar</a></li>
+          <li><a href="#"><i class="fa-solid fa-envelope"></i><br/>Inbox</a></li>
+          <li><a href="#"><i class="fa-solid fa-clock"></i>History</a></li>
+          <li><a href="#"><i class="fa-brands fa-youtube"></i>Studio</a></li>
+          <li><a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i>Commons</a></li>
+          <li><a href="#"><i class="fa-solid fa-question"></i><br/>Help</a></li>
+        </ul>
+      </div>
+      <div>
+        <ul class="wd-navigation">
+          <li>
+            <a href="/Kanbas/Courses/Home/screen.html">Home</a></li>
+          <li>
+            <a href="/Kanbas/Courses/Modules/screen.html">Modules</a>
+          </li>
+          <li><a href="http://piazza.com">Piazza</a></li>
+          <li><a href="#">Zoom</a></li>
+          <li class="wd-active">
+            <a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a>
+          </li>
+          <li><a href="#">Quizzes</a></li>
+          <li><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
+          <li><a href="#">People</a></li>
+        </ul>
+      </div>
+      <div>
+        <table width="100%">
+          <tbody>
+            <tr>
+              <td>
+                <input placeholder="Search for Assignment" />
+              </td>
+              <td>
+                <button>+ Group</button>
+                <button>+ Assignment</button>
+                <select>
+                  <option>Edit Assigment Dates</option>
+                </select>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <ul>
+          <li>
+            ASSIGNMENTS <button>+</button>
+            <select>
+              <option>Edit</option>
+              <option>Delete</option>
+              <option>Move</option>
+            </select>
             <ul>
               <li>
-                <a href="/Kanbas/Account/Navigation/index.html"> Account</a>
-              </li>
-              <li>
-                <a href="/Kanbas/Dashboard/screen.html">Dashboard</a>
-              </li>
-              <li>
-                <a href="/Kanbas/Courses/Home/screen.html">Courses</a>
-              </li>
-              <li>
-                <a href="/Kanbas/Calendar/index.html">Calendar</a>
-              </li>
-              <li><a href="/Kanbas/Inbox/index.html">Inbox</a></li>
-            </ul>
-          </td>
-          <td>
-            <ul>
-              <li>
-                <a href="/Kanbas/Courses/Home/screen.html"> Home</a>
-              </li>
-              <li>
-                <a href="/Kanbas/Courses/Modules/screen.html"> Modules</a>
-              </li>
-              <li><a href="/Kanbas/Courses/Piazza/index.html"> Piazza</a></li>
-              <li><a href="/Kanbas/Courses/Grades/screen.html"> Grades</a></li>
-              <li>
-                <a href="/Kanbas/Courses/Assignments/screen.html">
-                  Assignments</a
+                <a href="/Kanbas/Courses/Assignments/Editor/screen.html"
+                  >A1</a
                 >
-              </li>
-            </ul>
-          </td>
-          <td>
-            <table width="100%">
-              <tbody>
-                <tr>
-                  <td>
-                    <input placeholder="Search for Assignment" />
-                  </td>
-                  <td>
-                    <button>+ Group</button>
-                    <button>+ Assignment</button>
-                    <select>
-                      <option>Edit Assigment Dates</option>
-                    </select>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <ul>
-              <li>
-                ASSIGNMENTS <button>+</button>
                 <select>
                   <option>Edit</option>
                   <option>Delete</option>
-                  <option>Move</option>
-                </select>
-                <ul>
-                  <li>
-                    <a href="/Kanbas/Courses/Assignments/Editor/screen.html"
-                      >A1</a
-                    >
-                    <select>
-                      <option>Edit</option>
-                      <option>Delete</option>
-                      <option>Move</option></select
-                    ><br />
-                    Due: 2019-01-01 | 100 pts
-                  </li>
-                  <li>
-                    <a href="/Kanbas/Courses/Assignments/Editor/screen.html"
-                      >A2</a
-                    >
-                    <select>
-                      <option>Edit</option>
-                      <option>Delete</option>
-                      <option>Move</option></select
-                    ><br />
-                    Due: 2019-01-01 | 100 pts
-                  </li>
-                  <li>
-                    <a href="/Kanbas/Courses/Assignments/Editor/screen.html"
-                      >A3</a
-                    >
-                    <select>
-                      <option>Edit</option>
-                      <option>Delete</option>
-                      <option>Move</option></select
-                    ><br />
-                    Due: 2019-01-01 | 100 pts
-                  </li>
-                </ul>
+                  <option>Move</option></select
+                ><br />
+                Due: 2019-01-01 | 100 pts
               </li>
               <li>
-                QUIZZES
-                <ul>
-                  <li><a href="/Kanbas/Courses/Assignments/Editor/screen.html">Q1</a></li>
-                  <li><a href="/Kanbas/Courses/Assignments/Editor/screen.html">Q2</a></li>
-                  <li><a href="/Kanbas/Courses/Assignments/Editor/screen.html">Q3</a></li>
-                </ul>
+                <a href="/Kanbas/Courses/Assignments/Editor/screen.html"
+                  >A2</a
+                >
+                <select>
+                  <option>Edit</option>
+                  <option>Delete</option>
+                  <option>Move</option></select
+                ><br />
+                Due: 2019-01-01 | 100 pts
               </li>
               <li>
-                EXAMS
-                <ul>
-                  <li><a href="/Kanbas/Courses/Assignments/Editor/screen.html">X1</a></li>
-                  <li><a href="/Kanbas/Courses/Assignments/Editor/screen.html">X2</a></li>
-                </ul>
+                <a href="/Kanbas/Courses/Assignments/Editor/screen.html"
+                  >A3</a
+                >
+                <select>
+                  <option>Edit</option>
+                  <option>Delete</option>
+                  <option>Move</option></select
+                ><br />
+                Due: 2019-01-01 | 100 pts
               </li>
             </ul>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+          </li>
+          <li>
+            QUIZZES
+            <ul>
+              <li><a href="/Kanbas/Courses/Assignments/Editor/screen.html">Q1</a></li>
+              <li><a href="/Kanbas/Courses/Assignments/Editor/screen.html">Q2</a></li>
+              <li><a href="/Kanbas/Courses/Assignments/Editor/screen.html">Q3</a></li>
+            </ul>
+          </li>
+          <li>
+            EXAMS
+            <ul>
+              <li><a href="/Kanbas/Courses/Assignments/Editor/screen.html">X1</a></li>
+              <li><a href="/Kanbas/Courses/Assignments/Editor/screen.html">X2</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
   </body>
 </html>

@@ -1,12 +1,96 @@
 <html>
-    <head></head>
+    <head>
+        <link rel="stylesheet" href="../../../Kanbas/styles.css" />
+        <link rel="stylesheet" href="index.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/6718b752a3.js" crossorigin="anonymous"></script></head>
+    </head>
     <body>
-        <table>
+        <div class="d-flex">
+            <div>
+                <div class="d-none d-md-block">
+                    <ul class="wd-kanbas-navigation">
+                        <li>
+                        <a href="http://northeastern.edu">N</a>
+                        </li>
+                        <li class="wd-active">
+                        <a href="/Kanbas/Account/Profile/screen.html">
+                            <i class="fa-regular fa-user" id="account"></i>
+                            Account</a>
+                        </li>
+                        <li>
+                        <a href="../../Dashboard/screen.html">
+                            <i class="fa fa-tachometer"></i>Dashboard</a>
+                        </li>
+                        <li><a href="/Kanbas/Courses/Home/screen.html"><i class="fa-solid fa-book" style="size: 80px;"></i>Courses</a> </li>
+                        <li><a href="#"><i class="fa-solid fa-calendar"></i>Calendar</a></li>
+                        <li><a href="#"><i class="fa-solid fa-envelope"></i><br/>Inbox</a></li>
+                        <li><a href="#"><i class="fa-solid fa-clock"></i>History</a></li>
+                        <li><a href="#"><i class="fa-brands fa-youtube"></i>Studio</a></li>
+                        <li><a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i>Commons</a></li>
+                        <li><a href="#"><i class="fa-solid fa-question"></i><br/>Help</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div>  
+                <ul class="wd-navigation">
+                    <li>
+                        <a href="#">Notifications</a>
+                    </li>
+                    <li>
+                        <a href="/Kanbas/Account/Profile/screen.html">Profile</a>
+                    </li>
+                    <li>
+                        <a href="#">Files</a>
+                    </li>
+                    <li>
+                        <a href="#">Settings</a>
+                    </li>
+                    <li>
+                        <a href="#">ePortfolios</a>
+                    </li>
+                    <li>
+                        <a href="#">Shared Content</a>
+                    </li>
+                    <li>
+                        <a href="#">The Hub</a>
+                    </li>
+                    <li>
+                        <a href="#">Qwickly Course Tools</a>
+                    </li>
+                    <li>
+                        <a href="#">Global Announcements</a>
+                    </li>
+                </ul>   
+            </div> 
+            <div style="padding: 20px;">
+                John Doe Profile
+                <hr>
+
+                <h1>John Doe</h1>
+                <button>
+                    <a href="../Editor/screen.html">Edit Profile</a>
+                </button>
+
+                <h2>Contact</h2>
+                <p>No registered services</p>
+
+                <h2>Biography</h2>
+                <p>Named John Doe, born in John Doe, Virginia</p>
+
+                <h2>Links</h2>
+                <a href="https://www.youtube.com/">YouTube</a>
+            </div>
+        </div>
+    </body>
+</html>
+
+        <!-- <table>
             <tr>
                 <td>
                     <ul>
                         <li>
-                          <a href="/Kanbas/Account/Navigation/index.html"> Account</a>
+                          <a href="/Kanbas/Account/Navigation/index.html">Account</a>
                         </li>
                         <li>
                           <a href="/Kanbas/Dashboard/screen.html">Dashboard</a>
@@ -19,6 +103,126 @@
                         </li>
                         <li><a href="/Kanbas/Inbox/index.html">Inbox</a></li>
                     </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="#">Notifications</a>
+                        </li>
+                        <li>
+                            <a href="/Kanbas/Account/Profile/screen.html">Profile</a>
+                        </li>
+                        <li>
+                            <a href="#">Files</a>
+                        </li>
+                        <li>
+                            <a href="#">Settings</a>
+                        </li>
+                        <li>
+                            <a href="#">ePortfolios</a>
+                        </li>
+                        <li>
+                            <a href="#">Shared Content</a>
+                        </li>
+                        <li>
+                            <a href="#">The Hub</a>
+                        </li>
+                        <li>
+                            <a href="#">Qwickly Course Tools</a>
+                        </li>
+                        <li>
+                            <a href="#">Global Announcements</a>
+                        </li>
+                    </ul>   
+                </td>
+                <td>
+                    <h1>John Doe</h1>
+
+                    Name*:<input type="text" placeholder="John Doe">
+                    Pronouns:<select name="pronouns">
+                        <option value="none" selected>None</option>
+                        <option value="hehim">He / Him</option>
+                        <option value="hershe">Her / She</option>
+                    </select> <br/> <br/>
+
+                    Title:<input type="text"> <br/>
+                    
+                    <h2>Contact</h2>
+                    No registered services, you can add some on the <a href="#">settings</a> page. <br/>
+
+                    <h2>Biography</h2>
+                    <textarea>Named John Doe, born in John Doe, Virginia</textarea> <br/>
+
+                    <h2>Links</h2>
+                    <ul>
+                        <li>
+                            <a href="https://www.youtube.com/">Youtube</a> -> Links to an external site.
+                        </li>
+                    </ul> <br/><br/>
+
+                    <table>
+                        <tr>
+                            <td>
+                                <h3>Title</h3>
+                                <input type="text" placeholder="YouTube">
+                            </td> 
+                            <td>
+                                ->
+                            </td>
+                            <td>
+                                <h3>URL</h3>
+                                <input type="text" placeholder="https://www.youtube.com/">
+                            </td>
+                        </tr>
+                    </table> 
+                    <button>Add another link</button> <br/>
+                    <button>Cancel</button>
+                    <button>
+                        <a href="..\Profile\screen.html">Save profile</a>
+                    </button> <br />
+                    <button>
+                        <a href="../Editor/screen.html">Edit profile</a>
+                    </button>
+                    <button>
+                        <a href="../Profile/screen.html">Cancel editing</a>
+                    </button>
+                </td>
+            </tr>
+        </table> -->
+    </body>
+</html>
+
+<!-- <html>
+    <head>    
+        <link rel="stylesheet" href="../../../Kanbas/styles.css" />
+        <link rel="stylesheet" href="index.css" />
+        <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css" />
+        <script src="https://kit.fontawesome.com/6718b752a3.js" crossorigin="anonymous"></script></head>
+    <body>
+        <table>
+            <tr>
+                <td>
+                    <ul class="wd-kanbas-navigation">
+                        <li>
+                          <a href="http://northeastern.edu">N</a>
+                        </li>
+                        <li class="wd-active">
+                          <a href="/Kanbas/Account/Profile/screen.html">
+                            <i class="fa-regular fa-user" id="account" style="color: red"></i>
+                            Account</a>
+                        </li>
+                        <li>
+                          <a href="../../Dashboard/screen.html">
+                            <i class="fa fa-tachometer"></i>Dashboard</a>
+                        </li>
+                        <li><a href="/Kanbas/Courses/Home/screen.html"><i class="fa-solid fa-book" style="size: 80px;"></i>Courses</a> </li>
+                        <li><a href="#"><i class="fa-solid fa-calendar"></i>Calendar</a></li>
+                        <li><a href="#"><i class="fa-solid fa-envelope"></i><br/>Inbox</a></li>
+                        <li><a href="#"><i class="fa-solid fa-clock"></i>History</a></li>
+                        <li><a href="#"><i class="fa-brands fa-youtube"></i>Studio</a></li>
+                        <li><a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i>Commons</a></li>
+                        <li><a href="#"><i class="fa-solid fa-question"></i><br/>Help</a></li>
+                      </ul>
                 </td>
                 <td>
                     <ul>
@@ -72,4 +276,4 @@
             </tr>
         </table>
     </body>
-</html>
+</html> -->
