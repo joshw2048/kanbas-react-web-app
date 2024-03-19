@@ -1,55 +1,74 @@
 import React, { useState } from "react";
-import "./index.css";
-import { modules } from "../../Database";
-import { FaEllipsisV, FaCheckCircle, FaPlusCircle, FaAngleDown } from "react-icons/fa";
-import { useParams } from "react-router";
+import { useParams } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  addModule,
+  deleteModule,
+  updateModule,
+  setModule,
+} from "./reducer"
+import { KanbasState } from "../../store";
+
 function ModuleList() {
   const { courseId } = useParams();
-  const modulesList = modules.filter((module) => module.course === courseId);
-  const [selectedModule, setSelectedModule] = useState(modulesList[0]);
+  const moduleList = useSelector((state: KanbasState) => 
+    state.modulesReducer.modules);
+  const module = useSelector((state: KanbasState) => 
+    state.modulesReducer.module);
+  const dispatch = useDispatch();
   return (
-    <>
-      <div className="my-2">
-        <button className="me-2">Collapse All</button>
-        <button className="me-2">View Progress</button>
-        <button className="me-2"><FaCheckCircle className="text-success" />Publish All <FaAngleDown /></button>
-        <button className="me-2 wd-bg-red">+ Module</button>
-        <button className="me-2"><FaEllipsisV/></button>
-        <hr/>
-      </div>
-
-      <ul className="list-group wd-modules">
-        {modulesList.map((module) => (
-          <li
-            className="list-group-item"
-            onClick={() => setSelectedModule(module)}>
-            <div>
-              <FaEllipsisV className="me-2" />
-              {module.name}
-              <span className="float-end">
-                <FaCheckCircle className="text-success" />
-                <FaPlusCircle className="ms-2" />
-                <FaEllipsisV className="ms-2" />
-              </span>
+    <ul className="list-group">
+      <li className="list-group-item">
+        <div className="my-2">
+          <input
+            value={module.name}
+            onChange={(e) =>
+              dispatch(setModule({ ...module, name: e.target.value }))
+            }/>
+        </div>
+        <div className="mb-1">
+          <textarea
+            value={module.description}
+            onChange={(e) =>
+              dispatch(setModule({ ...module, description: e.target.value }))
+            }/>
+        </div>
+        <div className="d-flex flex-row">
+          <div className="me-2">
+            <button type="button" className="btn btn-success"
+              onClick={() => dispatch(addModule({ ...module, course: courseId }))}>
+              Add
+            </button>
+          </div>
+          <div>
+            <button className="btn btn-outline-success"
+              onClick={() => dispatch(updateModule(module))}>
+              Update
+            </button>
+          </div>
+        </div>
+      </li>
+      {moduleList
+        .filter((module) => module.course === courseId)
+        .map((module, index) => (
+          <li key={index} className="list-group-item">
+            <h3>{module.name}</h3>
+            <div className="mb-3">
+              <button className="btn btn-outline-dark me-2"
+                onClick={() => dispatch(setModule(module))}>
+                Edit
+              </button>
+              <button className="btn btn-danger"
+                onClick={() => dispatch(deleteModule(module._id))}>
+                Delete
+              </button>
             </div>
-            {selectedModule._id === module._id && (
-              <ul className="list-group">
-                {module.lessons?.map((lesson) => (
-                  <li className="list-group-item">
-                    <FaEllipsisV className="me-2" />
-                    {lesson.name}
-                    <span className="float-end">
-                      <FaCheckCircle className="text-success" />
-                      <FaEllipsisV className="ms-2" />
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            )}
+            <p>{module.description}</p>
+            <p>{module._id}</p>
           </li>
         ))}
-      </ul>
-    </>
+    </ul>
   );
 }
 export default ModuleList;
+
