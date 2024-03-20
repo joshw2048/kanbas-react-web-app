@@ -2,7 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import helloReducer from "../a4/ReduxExamples/HelloRedux/helloReducer";
 import counterReducer from "../a4/ReduxExamples/CounterRedux/counterReducer";
 import addReducer from "../a4/ReduxExamples/AddRedux/addReducer";
-import TodosReducer from "../a4/ReduxExamples/todos/TodosReducer";
+import todosReducer from "../a4/ReduxExamples/todos/TodosReducer";
 export type TodoType = {
   id: string;
   title: string;
@@ -29,7 +29,7 @@ const store = configureStore({
     helloReducer,
     counterReducer,
     addReducer,
-    TodosReducer
+    todosReducer
   },
 });
 export default store;
